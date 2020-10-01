@@ -22,13 +22,13 @@
         </tr>
       </thead>
       <tbody>
-        <% for(let url in urls) { %>
+        <% for(let url in filteredURLs) { %>
           <tr>
             <td>
               <a href=<%= "urls/" + `${url}` %>><%= url %></a>
             </td>
             <td>
-              <a href=<%= urls[url] %>><%= urls[url] %></a>
+              <a href=<%= filteredURLs[url]['longURL'] %>> <%= filteredURLs[url]['longURL'] %></a>
             </td>
             <td>
               <form method="GET" action="/urls/<%= url %>/">
